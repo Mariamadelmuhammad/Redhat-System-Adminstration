@@ -1,0 +1,48 @@
+Task5 
+
+1-mariam@ubuntu:~$ compress mariam.tar
+mariam@ubuntu:~$ gzip m2
+mariam@ubuntu:~$ bzip2 m3
+
+mariam@ubuntu:~$unzip mariam.tar
+
+mariam@ubuntu:~$ gunzip m2 
+
+2-mariam@ubuntu:~$ zcat m2.tar
+
+
+3-mariam@ubuntu:~$ sudo tar -cvf /etc
+
+4-mariam@ubuntu:~$ find -mtime -2 /home
+
+
+
+5-mariam@ubuntu:/etc$ find -user root
+
+
+6-mariam@ubuntu:/etc$ find -d
+
+
+7-mariam@ubuntu:/etc$ find -name profile
+
+
+
+8-mariam@ubuntu:/etc$ find - d /etc/passwd
+mariam@ubuntu:/etc$ find - d /dev/pts/0
+mariam@ubuntu:/etc$ find - d /etc
+mariam@ubuntu:/etc$ find - d /dev/sda
+
+9-mariam@ubuntu:/etc$ ls -i /
+mariam@ubuntu:/etc$ ls -i /etc
+mariam@ubuntu:/etc$ ls -i /etc/hosts
+
+
+10-********************
+
+
+11-********************
+
+12-mariam@ubuntu:/etc$ ln -s /etc/passwd /boot
+ln: failed to create symbolic link '/boot/passwd': Permission denied
+
+

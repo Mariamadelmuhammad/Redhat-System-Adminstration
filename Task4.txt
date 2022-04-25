@@ -1,0 +1,108 @@
+Task4
+
+1-
+mariam@ubuntu:~$ ls /bin>/tmp/commands.list
+
+mariam@ubuntu:/tmp$ cat /tmp/commands.list
+
+
+
+
+2-mariam@ubuntu:/tmp$  ls /bin | wc
+  47   85 2812 /etc/passwd
+
+
+
+ 3-mariam@ubuntu:/tmp$ grep ^g /etc/passwd    or grep -u -g /etc/passwd
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+      
+ 
+4-ariam@ubuntu:~$ grep -u ^g /etc/passwd
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+geoclue:x:122:127::/var/lib/geoclue:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+
+mariam@ubuntu:~$ grep -u ^g /etc/passwd>file11
+mariam@ubuntu:~$ cut -f1,6 -d: file11
+games:/usr/games
+gnats:/var/lib/gnats
+geoclue:/var/lib/geoclue
+gnome-initial-setup:/run/gnome-initial-setup/
+gdm:/var/lib/gdm3
+
+
+
+
+
+
+
+
+
+5-mariam@ubuntu:~$ sort file11>file12
+mariam@ubuntu:~$ cat file12
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+gdm:x:125:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+geoclue:x:122:127::/var/lib/geoclue:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+gnome-initial-setup:x:124:65534::/run/gnome-initial-setup/:/bin/false
+
+
+
+(6)*******************
+1-
+2-
+
+7-mariam@ubuntu:~$  ps -eaho user | sort -u | wc -l        orwho
+8-mariam@ubuntu:~$ head /etc/passwd | tail -3
+(9)
+1-shows only what f2 has or overwrite on the second one f1 or f2 whatever comes last
+
+2-***********mariam@ubuntu:~$ ls | rm
+rm: missing operand
+Try 'rm --help' for more information.
+3-***********mariam@ubuntu:~$ ls /etc/passwd |wc -l   l--->lines
+--->1
+
+10-mariam@ubuntu:~$ sleep 100
+11-^Z
+[3]+  Stopped                 sleep 100
+12-mariam@ubuntu:~$ sleep 100& bg%3      %+process number
+[4] 6614
+mariam@ubuntu
+
+13-mariam@ubuntu:~$ jobs
+[1]   Stopped                 grep --color=auto /.bash_profile
+[2]-  Stopped                 grep --color=auto .bash_profile
+[3]+  Stopped                 sleep 100
+[4]   Running                 sleep 100 &
+
+14-mariam@ubuntu:~$ sleep 100&
+[4] 6614
+ariam@ubuntu:~$ fg %4
+sleep 100
+^Z
+[4]+  Stopped                 sleep 100
+mariam@ubuntu:~$ bg %4
+[4]+ sleep 100 &
+
+
+15-mariam@ubuntu:~$ kill -kill %4
+or
+mariam@ubuntu:~$ kill 9 %4
+bash: kill: (9) - Operation not permitted
+mariam@ubuntu:~$ 
+[4]   Terminated              sleep 100
+
+16-mariam@ubuntu:~$ ps aux | grep ^mariam
+
+17- mariam@ubuntu:~$ top -u '!mariam'
+
+or
+mariam@ubuntu:~$ ps -U mariam
+
+18-mariam@ubuntu:~$ pgrep -l -u mariam
+
+
+19- p kill -u

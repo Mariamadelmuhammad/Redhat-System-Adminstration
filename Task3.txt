@@ -1,0 +1,32 @@
+1-
+mariam@ubuntu:~$ touch mycv
+mariam@ubuntu:~$ sudo apt-get install vim 
+mariam@ubuntu:~$ sudo vim mycv
+name:Mariam Adel Muhammad
+age:22
+school:Business Adminstration , HR
+University:Alexandria UNI
+Experience : web Development
+
+(2)
+1-esc+j
+2-esc+k
+3-esc+/+age
+4-esc+:1,5 or :5
+5-esc+dd
+6-esc+A
+
+
+3-mariam@ubuntu:~$ cat /etc/shells
+4-mariam@ubuntu:~$ env  
+5-mariam@ubuntu:~$ printenv shell
+
+6-mariam@ubuntu:~$ echo $variable
+7-mariam@ubuntu:~$ echo $USER
+8-**************
+9- vim ~.bashrc
+date 
+ps1= 'mariamadel'    ---->changes prompt name
+
+10-*************
+11-alias ls = "ls -l"

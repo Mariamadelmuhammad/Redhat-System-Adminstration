@@ -1,0 +1,110 @@
+Mariam Adel Muhammad python G2 Lab2....>
+
+
+1-mariam@ubuntu:~/Desktop$ sudo useradd -c islamaskar islam
+ariam@ubuntu:~/Desktop$ sudo passwd islam
+New password: 
+Retype new password: 
+
+
+
+2-mariam@ubuntu:~/Desktop$ sudo adduser -c baduser baduser
+New password: 
+Retype new password: 
+
+
+3-mariam@ubuntu:~/Desktop$ sudo groupadd -g30000 pgroup
+
+
+4-mariam@ubuntu:~/Desktop$ sudo groupadd  badgroup
+mariam@ubuntu:~/Desktop$ tail -4 /etc/group
+islam:x:1002:
+baduser:x:1003:
+pgroup:x:30000:
+badgroup:x:30001:
+
+
+5-mariam@ubuntu:~/Desktop$ sudo usermod -g 30000 islam
+
+
+6-mariam@ubuntu:~/Desktop$ sudo passwd islam
+New password: 
+Retype new password: 
+passwd: password updated successfully
+
+
+7-Account expires						: never
+
+mariam@ubuntu:~/Desktop$ sudo chage -E 30 islam
+passwd: password expiry information changed.
+Account expires						: Jan 31, 1970
+
+8-mariam@ubuntu:~/Desktop$ sudo passwd -l baduser
+
+mariam@ubuntu:~/Desktop$ su baduser
+Password: 
+su: Authentication failure
+
+9-ariam@ubuntu:~/Desktop$ sudo userdel -r baduser
+userdel: user 'baduser' does not exist
+
+10-mariam@ubuntu:~/Desktop$ sudo groupdel  badgroup
+
+13-mariam@ubuntu:~/mariam$ sudo chmod u=r  myteam
+
+14--mariam@ubuntu:~/Desktop$ su mariam
+Password: 
+mariam@ubuntu:~/Desktop$ su islam
+Password: 
+Your account has expired; please contact your system administrator
+su: Authentication failure
+15-mariam@ubuntu:~/Desktop$ cd /home/mariam/myteam
+mariam@ubuntu:~/myteam$ 
+
+(16)
+
+1-mariam@ubuntu:~/myteam$ cd
+mariam@ubuntu:~$ touch oldpasswd
+mariam@ubuntu:~$ sudo chmod u=rw,g=rx,o=x oldpasswd
+mariam@ubuntu:~$ sudo chmod 631 oldpasswd
+
+second way
+sudo chmod u=rw oldpasswd
+sudo chmod g=rx oldpasswd
+sudo chmod o=x oldpasswd
+
+
+2-mariam@ubuntu:~$ umask 146 oldpasswd
+
+3-rw-rw-r-- 5permissions --->for file total 9 permissions ...rw without x
+  for dir--->9 permissions including x -->cd
+
+4-
+umask 777 (no file name) --->umask or chmod
+
+17---->
+(1)-FOR corying dir SRC DIR---> r/x    for target--> w/x  write for changing name
+(2)-FOR corying file src dir-->   r only (cat)   for target-->w/x
+(3)-delete---> no permisssion needed **************w
+(4)-x
+(5)-r
+(6)-r
+(7)-w
+
+
+
+
+18-Create a file with permission 444. Try to edit in it and to remove it? Note what 
+happened.
+chmod 444 file first  can edit and remove
+umask 333then create file read only without edit and remove
+
+
+
+
+
+19-
+dir -->cd 
+file -->execute -->run file as program
+
+
